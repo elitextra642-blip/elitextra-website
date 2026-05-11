@@ -14,12 +14,14 @@ Build a premium, warm, Nigerian agricultural export website that feels alive wit
 - Commit the current site as the initial independent repo state.
 - Exclude `_archive/`, local env files, dependency folders, and build output from publishing.
 - Review all pages for broken links, weak copy, and missing metadata.
+- Maintain a publishable static baseline before any framework migration.
 
 ## Phase 2: Brand Intelligence Pass
 
 - Read brand foundation, brand DNA, design spec, product flyers, and product reference images as source material.
 - Replace generic copy with direct-from-farm, traceability, quality, partnership, and market-specific messaging.
 - Add product-specific content for cocoa, dry pap, beans powder, palm oil, hibiscus, and garri.
+- Keep unconfirmed claims out of final copy until verified by the user.
 
 ## Phase 3: Dynamic Static Upgrade
 
@@ -34,6 +36,7 @@ Build a premium, warm, Nigerian agricultural export website that feels alive wit
 - Prefer real product/reference assets where available.
 - Use AI-generated images only when they improve brand credibility and are saved into `assets/generated/`.
 - Avoid linking production pages to temporary external image URLs.
+- Create a social share image before the first serious client-facing publish.
 
 ## Phase 5: Framework Decision
 
@@ -54,6 +57,27 @@ If the static site can achieve the needed result, keep it static for speed and d
 - Add product-specific pages or sections with richer buying logic.
 - Add market pages for USA, UK, Europe, and Nigeria when copy is ready.
 - Add real form handling before publication.
+
+## Publish Milestones
+
+### Milestone A: Credible Public Presence
+
+- Static site is polished and deployable.
+- Inquiry path is clear.
+- No fake contact, pricing, certification, or volume claims.
+- Client can visit a real URL.
+
+### Milestone B: Client-Impress Showcase
+
+- Stronger generated/local campaign imagery.
+- Market-specific sections.
+- Product-specific story and packaging content.
+- More polished transitions and scroll storytelling.
+
+### Milestone C: World-Level Dynamic Build
+
+- Framework migration if needed.
+- Framer Motion, Three.js/Spline, video loops, sample shop, real forms, and analytics.
 
 ## Asset Requests For User
 

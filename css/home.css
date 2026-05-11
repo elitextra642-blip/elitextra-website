@@ -534,6 +534,75 @@
   font-size: var(--text-sm);
 }
 
+.market-section {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(93, 64, 55, 0.1), transparent 22rem),
+    linear-gradient(180deg, #f7f1e5 0%, #fbf8f2 100%);
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.market-card {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  min-height: 24rem;
+  padding: clamp(1.3rem, 2vw, 1.8rem);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.58)),
+    radial-gradient(circle at top right, color-mix(in srgb, var(--market-accent) 18%, transparent), transparent 14rem);
+  border: 1px solid rgba(17, 26, 20, 0.08);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.market-card::before {
+  content: "";
+  position: absolute;
+  inset: auto 1.2rem 1.2rem 1.2rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: var(--market-accent);
+  opacity: 0.72;
+}
+
+.market-card h3 {
+  font-size: clamp(1.65rem, 2.4vw, 2.5rem);
+}
+
+.market-card p,
+.market-card li {
+  color: var(--color-text-secondary);
+}
+
+.market-card ul {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-bottom: var(--space-5);
+}
+
+.market-card li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.market-card li::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-top: 0.62rem;
+  border-radius: 50%;
+  background: var(--market-accent);
+  flex: 0 0 auto;
+}
+
 .proof-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -676,7 +745,8 @@
 @media (max-width: 900px) {
   .home-hero__proof,
   .proof-grid__stats,
-  .advantage-grid {
+  .advantage-grid,
+  .market-grid {
     grid-template-columns: 1fr;
   }
 
