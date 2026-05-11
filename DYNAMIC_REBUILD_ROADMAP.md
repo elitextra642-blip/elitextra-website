@@ -6,15 +6,15 @@ This repository is the publishing home for the Elitextra website. Source materia
 
 ## Direction
 
-Build a premium, warm, Nigerian agricultural export website that feels alive without becoming gimmicky. The motion should support buyer trust: product clarity, sourcing confidence, packaging quality, and fast inquiry flow.
+Build a premium, warm, Nigerian agricultural export platform that feels alive without becoming gimmicky. The motion should support buyer trust: product clarity, sourcing confidence, packaging quality, and fast inquiry flow.
 
 ## Phase 1: Stabilize This Repo
 
-- Keep the current static HTML/CSS/JS site as the safe baseline.
+- Keep the current HTML/CSS/JS build as the safe first showcase baseline.
 - Commit the current site as the initial independent repo state.
 - Exclude `_archive/`, local env files, dependency folders, and build output from publishing.
 - Review all pages for broken links, weak copy, and missing metadata.
-- Maintain a publishable static baseline before any framework migration.
+- Maintain a publishable first showcase before any framework migration.
 
 ## Phase 2: Brand Intelligence Pass
 
@@ -23,7 +23,7 @@ Build a premium, warm, Nigerian agricultural export website that feels alive wit
 - Add product-specific content for cocoa, dry pap, beans powder, palm oil, hibiscus, and garri.
 - Keep unconfirmed claims out of final copy until verified by the user.
 
-## Phase 3: Dynamic Static Upgrade
+## Phase 3: Dynamic Experience Upgrade
 
 - Add scroll storytelling sections using vanilla CSS/JS first.
 - Add a richer buyer-path planner for sample, wholesale, and recurring supply.
@@ -48,7 +48,7 @@ Move to Next.js only if the desired experience requires:
 - API-backed quote/contact forms.
 - Spline, Three.js, or React Three Fiber scenes.
 
-If the static site can achieve the needed result, keep it static for speed and deployment simplicity.
+If the current HTML/CSS/JS build can achieve a specific effect safely, use it. If the experience needs routing, backend forms, rich transitions, 3D, or commerce, migrate to the full dynamic stack.
 
 ## Phase 6: Dynamic Premium Build
 
@@ -60,9 +60,9 @@ If the static site can achieve the needed result, keep it static for speed and d
 
 ## Publish Milestones
 
-### Milestone A: Credible Public Presence
+### Milestone A: Credible Public Showcase
 
-- Static site is polished and deployable.
+- First showcase is polished and deployable.
 - Inquiry path is clear.
 - No fake contact, pricing, certification, or volume claims.
 - Client can visit a real URL.

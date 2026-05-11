@@ -2,7 +2,7 @@
 
 ## Fastest Publish Path
 
-Use a static host for the first public version. The site does not require a build command.
+Use a simple host for the first public version. The current build does not require a build command, while the long-term direction remains a full dynamic platform.
 
 Recommended first publish:
 

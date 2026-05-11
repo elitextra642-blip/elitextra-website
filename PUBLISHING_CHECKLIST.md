@@ -2,7 +2,7 @@
 
 ## First Public Version
 
-The first publishable version does not need every 3D/video idea finished. It must look credible, load fast, communicate clearly, and give buyers a direct inquiry path.
+The first publishable version does not need every 3D/video idea finished. It must look credible, image-rich, communicate clearly, and give buyers a direct inquiry path while we continue toward the full dynamic platform.
 
 ## Must Be Ready Before Publishing
 
@@ -19,7 +19,7 @@ The first publishable version does not need every 3D/video idea finished. It mus
 
 ## Should Be Improved Before Client Showcase
 
-- Replace temporary/generated-looking hero visuals with stronger local campaign imagery.
+- Replace weak or overly artificial hero visuals with stronger local campaign imagery.
 - Add more product-specific copy from flyers and reference images.
 - Add market-specific value sections for USA, UK, Europe, and Nigeria.
 - Add quality/compliance content if certifications are confirmed.
@@ -46,7 +46,7 @@ The first publishable version does not need every 3D/video idea finished. It mus
 
 ## Deployment Options
 
-- Cloudflare Pages for static speed and simplicity.
-- Netlify for easy static forms.
+- Cloudflare Pages for fast first publish.
+- Netlify for easy form handling.
 - Vercel if the site migrates to Next.js.
 - GitHub Pages for a simple temporary presence.
