@@ -1,115 +1,53 @@
 # Elitextra Website
 
-> Premium multi-page website for Elitextra — Nigerian agricultural export company connecting family farms to global buyers.
+Independent publishing repository for the Elitextra website: a premium Nigerian agricultural export brand serving buyers of cocoa, dry pap, beans powder, palm oil, dry hibiscus, and garri.
 
-**Live site value:** ~$50,000 (premium design, animations, multi-step ordering, B2B conversion focus)
+## Current Status
 
----
+This is the **Milestone A** website: a polished static public presence with dynamic client-side interactions. It is suitable for a first showcase once contact details, legal copy, and any unconfirmed claims are reviewed.
 
 ## Pages
 
 | Page | File | Purpose |
-|------|------|---------|
-| **Home** | `index.html` | Hero, products showcase, stats, process, testimonials, CTA |
-| **Products** | `products.html` | Filterable product grid with specs, MOQ info, shipping details |
-| **About** | `about.html` | Company story, mission/vision, values, team, timeline, certifications |
-| **Sourcing** | `sourcing.html` | Direct sourcing model, farm network, traceability, sustainability |
-| **Order** | `order.html` | Multi-step inquiry form, FAQ, WhatsApp contact |
-| **Contact** | `contact.html` | Contact form, office locations, world map, FAQ |
+| --- | --- | --- |
+| Home | `index.html` | Brand positioning, product highlights, sourcing story, buyer markets, quote CTA |
+| Products | `products.html` | Product catalogue, filters, product detail drawer, quote handoff |
+| Sourcing | `sourcing.html` | Sourcing model, handling process, supply-region story |
+| About | `about.html` | Company story, values, buyer confidence narrative |
+| Get quote | `order.html` | Structured inquiry form with live quote brief |
+| Contact | `contact.html` | Contact paths and quick message form |
+| Not found | `404.html` | Branded fallback page |
 
----
+## Features
 
-## Getting Started
+- Modular HTML/CSS/JS with no required build step.
+- Responsive layouts for desktop and mobile.
+- Scroll reveal animations using `IntersectionObserver`.
+- Product filtering and product detail drawer.
+- Quote selections stored locally and carried into the quote form.
+- Live quote summary based on selected products, quantity, and destination.
+- Buyer-path planner for sample, wholesale, and recurring supply.
+- Brand-informed market section for USA, UK, Europe, and Nigeria buyer segments.
+- Local git repo separated from the larger workspace.
 
-Open any `.html` file directly in a browser — no build step required.
+## Important Limits
 
-```
-open index.html
-```
+- Forms are client-side only until a real form backend is connected.
+- Pricing, certification, exact contact numbers, and legal policy content must be confirmed before final publication.
+- `_archive/` is ignored and should not be deployed.
+- Generated visuals should be saved into `assets/generated/` before being used in production pages.
 
-For local development with live reload:
-```bash
-npx serve .
-# or
-python -m http.server 8000
-```
+## Local Preview
 
----
+Open `index.html` directly in a browser, or use any static server you already trust on your machine.
 
-## Design System
+## Deployment Targets
 
-All CSS is modular and lives in `css/`:
+- Cloudflare Pages for a fast static publish.
+- Netlify if easy static form handling is desired.
+- Vercel if the project later migrates to Next.js.
+- GitHub Pages for a temporary public preview.
 
-| File | Purpose |
-|------|---------|
-| `variables.css` | Design tokens (colors, spacing, typography, animations) |
-| `base.css` | Reset, typography, utility classes, global styles |
-| `animations.css` | Keyframes, scroll-triggered reveals, hover effects |
-| `components.css` | Buttons, cards, forms, tabs, accordions, badges |
-| `layout.css` | Header, footer, navigation, section layouts |
+## Next Build Phase
 
----
-
-## JavaScript
-
-`js/main.js` powers:
-- Scroll-triggered reveal animations (IntersectionObserver)
-- Counter animations on scroll
-- Header shrink on scroll + backdrop blur
-- Mobile hamburger menu
-- Smooth anchor scrolling
-- Product category filtering
-- Multi-step order form
-- Testimonial slider
-- FAQ accordions
-- Modal open/close
-- Contact form submission handler
-- Scroll-to-top button
-- Lazy loading
-
----
-
-## Brand
-
-- **Company:** Elitextra (Nigeria)
-- **Tagline:** From Nigerian Soil to Global Tables
-- **Colors:** Forest Green #2E7D32, Rich Gold #C9A227, Deep Brown #5D4037, Cream #F5F5DC
-- **Fonts:** Montserrat (headlines), Open Sans (body), Playfair Display (accent)
-- **Products:** Cocoa, Dry Pap (Ogi), Beans Powder, Palm Oil, Dry Hibiscus (Zobo), Garri
-- **Markets:** USA · UK · Germany · Netherlands · France · Nigeria
-
----
-
-## Key Features
-
-- **$50K-level design** — custom CSS variables design system, premium animations, micro-interactions
-- **Scroll-reveal animations** — staggered entrance effects on every section
-- **Multi-step order form** — product selection → quantity → contact → review flow
-- **Product filter system** — filter by category on the products page
-- **Mobile-responsive** — optimized grid layouts for all breakpoints
-- **B2B conversion focused** — every page drives toward inquiry/WhatsApp/email
-- **No external dependencies** — pure HTML/CSS/JS, no frameworks
-
----
-
-## Deployment
-
-Deploy the entire `elitextra-website/` directory to any static host:
-
-```bash
-# Vercel
-vercel --prod
-
-# Netlify
-netlify deploy --prod
-
-# Cloudflare Pages
-wrangler pages deploy .
-
-# GitHub Pages
-# Push to repo → Settings → Pages → Deploy from main branch
-```
-
----
-
-*Built: April 2026 · Claude Code · Elitextra Project*
+See `DYNAMIC_REBUILD_ROADMAP.md` and `PUBLISHING_CHECKLIST.md`.
