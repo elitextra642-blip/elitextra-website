@@ -32,7 +32,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(15, 23, 19, 0.88), rgba(15, 23, 19, 0.32)),
+    linear-gradient(90deg, rgba(14, 47, 28, 0.86), rgba(27, 94, 32, 0.28)),
     var(--hero-image);
   background-size: cover;
   background-position: center;
@@ -67,12 +67,12 @@
 }
 
 .page-title {
-  max-width: 11ch;
+  max-width: 14ch;
   margin: 0 0 1.5rem;
   font-family: var(--font-display);
-  font-size: clamp(3rem, 9vw, 7rem);
-  line-height: 0.95;
-  letter-spacing: 0;
+  font-size: clamp(2.35rem, 6vw, 4.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
   color: var(--forest-900);
 }
 
@@ -124,12 +124,12 @@
 }
 
 .display-heading {
-  max-width: 12ch;
+  max-width: 15ch;
   margin-bottom: 1.4rem;
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4.8rem);
-  line-height: 0.98;
-  letter-spacing: 0;
+  font-size: clamp(1.9rem, 3.6vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
 .media-panel {
@@ -190,7 +190,7 @@
 }
 
 .product-grid-premium {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .contact-grid,
@@ -262,9 +262,15 @@
 }
 
 .product-card-premium__body {
-  display: grid;
+  display: flex;
+  min-height: 18.5rem;
+  flex-direction: column;
   gap: 0.75rem;
   padding: 1.35rem;
+}
+
+.product-card-premium__body .text-link {
+  margin-top: auto;
 }
 
 .product-card-premium__meta,
@@ -278,11 +284,22 @@
 
 .product-card-premium h3 {
   font-size: var(--text-xl);
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
 }
 
 .product-card-premium p {
   color: var(--color-text-secondary);
+}
+
+.price-badge {
+  width: fit-content;
+  padding: 0.48rem 0.72rem;
+  border-radius: var(--radius-pill);
+  background: rgba(46, 125, 50, 0.1);
+  border: 1px solid rgba(46, 125, 50, 0.16);
+  color: var(--forest-800);
+  font-weight: 750;
+  font-size: var(--text-sm);
 }
 
 .spec-list {
@@ -309,7 +326,7 @@
   color: var(--white);
   background:
     radial-gradient(circle at 20% 20%, rgba(208, 169, 94, 0.14), transparent 24rem),
-    linear-gradient(135deg, #142018 0%, #0f1713 100%);
+    linear-gradient(135deg, var(--forest-800) 0%, var(--forest-950) 100%);
 }
 
 .dark-band .display-heading,
@@ -433,7 +450,7 @@
   border-radius: var(--radius-2xl);
   color: var(--white);
   background:
-    linear-gradient(135deg, rgba(46, 67, 52, 0.92), rgba(15, 23, 19, 0.96)),
+    linear-gradient(135deg, rgba(27, 94, 32, 0.92), rgba(14, 47, 28, 0.96)),
     var(--cta-image, none);
   background-size: cover;
   background-position: center;
@@ -450,6 +467,41 @@
 
 .cta-panel p {
   color: rgba(255, 255, 255, 0.74);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pricing-card {
+  display: grid;
+  gap: 0.85rem;
+  min-height: 14rem;
+  padding: clamp(1.2rem, 2vw, 1.65rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  background:
+    radial-gradient(circle at top right, rgba(201, 162, 39, 0.13), transparent 12rem),
+    rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow-soft);
+}
+
+.pricing-card--wide {
+  grid-column: span 2;
+}
+
+.pricing-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--forest-800);
+}
+
+.pricing-card p {
+  color: var(--color-text-secondary);
 }
 
 .logo-img {
@@ -735,8 +787,13 @@ body.page-transition-out {
   .values-grid,
   .stat-strip,
   .form-grid,
-  .check-grid {
+  .check-grid,
+  .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-card--wide {
+    grid-column: auto;
   }
 
   .timeline-item {

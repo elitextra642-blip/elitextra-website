@@ -217,7 +217,12 @@
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html:not(.js-enabled) .reveal {
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.revealed {
@@ -269,7 +274,12 @@
 .stagger-children > * {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html:not(.js-enabled) .stagger-children > * {
+  opacity: 1;
+  transform: none;
 }
 
 .stagger-children.revealed > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }

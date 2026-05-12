@@ -1,5 +1,7 @@
 'use strict';
 
+document.documentElement.classList.add('js-enabled');
+
 const ELITEXTRA_PRODUCTS = {
   cocoa: {
     name: 'Cocoa',
@@ -7,6 +9,7 @@ const ELITEXTRA_PRODUCTS = {
     formats: 'Jars, cartons, bulk sacks',
     bestFor: 'Retail shelves, samples, specialty food buyers',
     image: 'assets/products/cocoa-jars.jpg',
+    price: 'From $6,500/MT FOB Lagos',
     story: 'A polished cocoa line built for buyers who need Nigerian origin, clean presentation, and a product that can move from sample review into repeat retail supply.',
     quoteCue: 'Ask for carton counts, jar sizing, labeling direction, and target destination.'
   },
@@ -16,6 +19,7 @@ const ELITEXTRA_PRODUCTS = {
     formats: '500g pouches, cartons, mixed packs',
     bestFor: 'Diaspora grocery channels and food service',
     image: 'assets/products/pap-pouches.jpg',
+    price: 'From $2.00/kg FOB Lagos',
     story: 'Fermented maize powder prepared for convenience-focused buyers who want familiar Nigerian staples in shelf-ready packaging.',
     quoteCue: 'Share pouch size, carton quantity, and whether you want plain or custom-label supply.'
   },
@@ -25,6 +29,7 @@ const ELITEXTRA_PRODUCTS = {
     formats: 'Pouches, cartons, wholesale cases',
     bestFor: 'Ready-to-cook protein staples',
     image: 'assets/products/beans-pouches.jpg',
+    price: 'From $3.50/kg FOB Lagos',
     story: 'A practical beans powder line for buyers serving customers who want speed, consistency, and authentic staple products.',
     quoteCue: 'Confirm pack size, order rhythm, and destination requirements.'
   },
@@ -34,6 +39,7 @@ const ELITEXTRA_PRODUCTS = {
     formats: 'Bottles, cartons, drums',
     bestFor: 'Food service, importers, private-label planning',
     image: 'assets/products/palm-oil-bottle.jpg',
+    price: 'From $800/MT FOB Lagos',
     story: 'Red palm oil sourced for culinary buyers who need reliable supply, clear packaging options, and a serious export path.',
     quoteCue: 'Include bottle or drum preference, volume range, and import documentation needs.'
   },
@@ -43,6 +49,7 @@ const ELITEXTRA_PRODUCTS = {
     formats: 'Pouches, cartons, bulk packs',
     bestFor: 'Tea, beverages, specialty ingredients',
     image: 'assets/products/hibiscus-pouch.jpg',
+    price: 'Confirm current grade price',
     story: 'A specialty ingredient line for tea, beverage, and wellness buyers who need hibiscus presented with stronger sourcing confidence.',
     quoteCue: 'Share intended use, pack format, and quality expectations.'
   },
@@ -52,12 +59,14 @@ const ELITEXTRA_PRODUCTS = {
     formats: '1kg packs, 25kg bags, wholesale cartons',
     bestFor: 'Staple supply and recurring replenishment',
     image: 'assets/products/garri-bag.jpg',
+    price: 'Confirm current pack price',
     story: 'Cassava flakes prepared for dependable staple distribution, from small retail runs to wholesale replenishment.',
     quoteCue: 'Specify white or yellow preference, bag size, and recurring supply goals.'
   }
 };
 
 const QUOTE_STORAGE_KEY = 'elitextraQuoteProducts';
+const ELITEXTRA_EMAIL = 'elitextra642@gmail.com';
 
 function getStoredQuoteProducts() {
   try {
@@ -287,6 +296,7 @@ function initProductDrawer() {
       <h2>${product.name}</h2>
       <p>${product.story}</p>
       <dl class="drawer-specs">
+        <div><dt>Price guide</dt><dd>${product.price}</dd></div>
         <div><dt>Formats</dt><dd>${product.formats}</dd></div>
         <div><dt>Best for</dt><dd>${product.bestFor}</dd></div>
         <div><dt>Quote note</dt><dd>${product.quoteCue}</dd></div>
@@ -406,7 +416,8 @@ function initQuoteBuilder() {
     summary.innerHTML = `
       <span class="mini-label">Ready to send</span>
       <h3>Your inquiry is structured.</h3>
-      <p>The form now contains the quote brief. If email is preferred, use the email button and include the same details.</p>
+      <p>The form now contains the quote brief. Use the email button below to send the prepared inquiry to Elitextra.</p>
+      <a class="text-link" href="mailto:${ELITEXTRA_EMAIL}?subject=${encodeURIComponent('Elitextra quote inquiry')}&body=${encodeURIComponent(message?.value || note)}">Open prepared email</a>
     `;
 
     window.setTimeout(() => {
@@ -656,11 +667,15 @@ function initContactForm() {
       if (!button) return;
 
       const originalText = button.textContent;
+      const formData = new FormData(form);
+      const subject = formData.get('topic') || 'Elitextra website inquiry';
+      const body = [...formData.entries()].map(([key, value]) => `${key}: ${value}`).join('\n');
       button.disabled = true;
-      button.textContent = 'Preparing...';
+      button.textContent = 'Preparing email...';
 
       window.setTimeout(() => {
-        button.textContent = 'Message ready';
+        button.textContent = 'Email ready';
+        window.location.href = `mailto:${ELITEXTRA_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.setTimeout(() => {
           button.disabled = false;
           button.textContent = originalText;

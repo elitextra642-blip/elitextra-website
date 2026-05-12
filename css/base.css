@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
 
 *,
 *::before,
@@ -103,7 +103,7 @@ ol {
   color: var(--white);
   background:
     radial-gradient(circle at top left, rgba(208, 169, 94, 0.16), transparent 25%),
-    linear-gradient(180deg, #101813 0%, #131e17 100%);
+    linear-gradient(180deg, var(--forest-800) 0%, var(--forest-900) 100%);
 }
 
 .section--cream {
@@ -184,7 +184,7 @@ h4 {
 }
 
 .section-heading {
-  margin-bottom: var(--space-16);
+  margin-bottom: clamp(2.5rem, 5vw, var(--space-16));
 }
 
 .section-heading--split {
@@ -230,7 +230,7 @@ h4 {
 }
 
 .font-accent {
-  font-family: var(--font-display);
+  font-family: var(--font-accent);
 }
 
 .bg-cream {

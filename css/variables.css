@@ -1,9 +1,9 @@
 :root {
-  --forest-950: #0f1713;
-  --forest-900: #111a14;
-  --forest-800: #1f2d24;
-  --forest-700: #2e4334;
-  --forest-500: #54775f;
+  --forest-950: #0e2f1c;
+  --forest-900: #123f25;
+  --forest-800: #1b5e20;
+  --forest-700: #2e7d32;
+  --forest-500: #5cae65;
   --sand-50: #f7f1e5;
   --sand-100: #f1e7d1;
   --sand-200: #e6d5b2;
@@ -31,13 +31,14 @@
 
   --color-bg-primary: var(--stone-50);
   --color-bg-secondary: var(--sand-50);
-  --color-bg-dark: var(--forest-900);
+  --color-bg-dark: var(--forest-800);
   --color-text-primary: var(--ink-900);
   --color-text-secondary: var(--ink-700);
   --color-text-tertiary: var(--ink-500);
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Outfit", "Segoe UI", sans-serif;
+  --font-display: "Montserrat", "Segoe UI", sans-serif;
+  --font-body: "Open Sans", "Segoe UI", sans-serif;
+  --font-accent: "Playfair Display", Georgia, serif;
   --font-mono: "IBM Plex Mono", Consolas, monospace;
 
   --text-xs: clamp(0.72rem, 0.7rem + 0.16vw, 0.8rem);
@@ -77,8 +78,8 @@
   --section-padding-x: clamp(1rem, 2vw, 2rem);
   --section-padding-y: clamp(5rem, 9vw, 9rem);
 
-  --shadow-soft: 0 20px 60px rgba(24, 22, 18, 0.08);
-  --shadow-deep: 0 28px 100px rgba(10, 13, 11, 0.35);
+  --shadow-soft: 0 14px 44px rgba(28, 48, 32, 0.08);
+  --shadow-deep: 0 24px 80px rgba(14, 47, 28, 0.28);
   --shadow-glow: 0 18px 50px rgba(208, 169, 94, 0.16);
 
   --transition-fast: 160ms cubic-bezier(0.32, 0.72, 0, 1);

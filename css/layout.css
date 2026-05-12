@@ -166,7 +166,9 @@
 }
 
 .footer {
-  background: linear-gradient(180deg, #121b15 0%, #0e1511 100%);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(208, 169, 94, 0.16), transparent 26rem),
+    linear-gradient(180deg, var(--forest-800) 0%, var(--forest-950) 100%);
   color: rgba(255, 255, 255, 0.82);
   padding-top: var(--space-24);
   padding-bottom: var(--space-8);
