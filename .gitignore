@@ -13,4 +13,8 @@ Thumbs.db
 .playwright-cli/
 _archive/
 vendor_imports/
+README.md
+DEPLOYMENT_NOTES.md
+DYNAMIC_REBUILD_ROADMAP.md
+PUBLISHING_CHECKLIST.md
 *.log
