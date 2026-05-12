@@ -12,4 +12,5 @@ out/
 Thumbs.db
 .playwright-cli/
 _archive/
+vendor_imports/
 *.log
